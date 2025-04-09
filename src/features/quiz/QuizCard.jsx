@@ -6,8 +6,6 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import ReplayIcon from '@mui/icons-material/Replay';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 
-
-
 const QuizCard = () => {
   const vocabList = useSelector(state => state.vocabulary.vocabList);
   const [currentWord, setCurrentWord] = useState(null);
@@ -77,11 +75,6 @@ const QuizCard = () => {
           <Alert severity={result ? 'success' : 'error'} sx={{ mt: 3 }}>
             <Box display="flex" alignItems="center">
               {result ? (
-                <CheckCircleIcon sx={{ mr: 1 }} />
-              ) : (
-                <CancelIcon sx={{ mr: 1 }} />
-              )}
-              {result ? (
                 'Chính xác!'
               ) : (
                 <>
@@ -91,7 +84,6 @@ const QuizCard = () => {
             </Box>
           </Alert>
         )}
-
       <Box mt={3}>
         <Button
           variant="contained"
